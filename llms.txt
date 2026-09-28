@@ -1,0 +1,13 @@
+# Ultrafast ATIF Helper
+
+> Read one selected source, preserve its bytes and identities, and retrieve only fields needed for the next task. The project name is not a measured speed claim.
+
+- [Agent contract](AGENTS.md): ownership and evidence boundaries.
+- [Specification](SPEC.md): local ETL, exact retrieval and derived-view acceptance.
+- [Helper Skill](skills/ultrafast-atif-helper/SKILL.md): ingest, resume, filter, verify and build bounded context packs.
+- [ATIF compatibility](docs/atif-compatibility.md): actual version changes, producer differences and safe future handling.
+- [Unified configuration](docs/configuration.md): shared standalone/bundle configuration, provider selection and named credential references.
+- [Prepared scoring](docs/scoring.md): explicit typed Jev requests, local pair mapping, bounded transport and separate retention decisions.
+- [Distribution](docs/distribution.md): independent and bundled installation, plugins, CI and source provenance.
+- [TypeScript helper API](src/helper/index.ts): local callable functions.
+- [Upstream license](LICENSE): retained MIT notice.

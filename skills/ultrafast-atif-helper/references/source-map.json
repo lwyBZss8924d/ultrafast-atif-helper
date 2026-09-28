@@ -1,0 +1,51 @@
+{
+  "external_source_links": [],
+  "files": [
+    {
+      "destination": "references/config/task-checkpoint.config.schema.json",
+      "projected_sha256": "c200a341da70c869c09a8ad369f2e4cbe5ff1f5093c6348af969c5c7693dd4cd",
+      "source": "config/task-checkpoint.config.schema.json",
+      "source_sha256": "c200a341da70c869c09a8ad369f2e4cbe5ff1f5093c6348af969c5c7693dd4cd"
+    },
+    {
+      "destination": "references/config/task-checkpoint.example.json",
+      "projected_sha256": "d5d97eebea3fccc1645072c5edb64d41c0e7ded3d7de1c7b59e7cb00388de12d",
+      "source": "config/task-checkpoint.example.json",
+      "source_sha256": "d5d97eebea3fccc1645072c5edb64d41c0e7ded3d7de1c7b59e7cb00388de12d"
+    },
+    {
+      "destination": "references/config/task-checkpoint.typesafe.example.json",
+      "projected_sha256": "acf8f36fd420551e7aa57a9913be0d2a6d44f559ea99d8441df89ed1755cbb3c",
+      "source": "config/task-checkpoint.typesafe.example.json",
+      "source_sha256": "acf8f36fd420551e7aa57a9913be0d2a6d44f559ea99d8441df89ed1755cbb3c"
+    },
+    {
+      "destination": "references/docs/atif-compatibility.md",
+      "projected_sha256": "9a587e53852f304a888a5fc6a5468aa9d50520c2cdac09b94526b8a28b23d0e6",
+      "source": "docs/atif-compatibility.md",
+      "source_sha256": "2d0d06cca291f3add9bdb2198418529a02564220093a91818c25fd11ffdf5fa4"
+    },
+    {
+      "destination": "references/docs/configuration.md",
+      "projected_sha256": "1ebaef3338a397759c094e2230a2cdd5fdb7e68a6e7535204e4c0359b94c71ea",
+      "source": "docs/configuration.md",
+      "source_sha256": "40fa5f16ef811d171a03e6d4203b0079f029bf0da870118752136bf90522462e"
+    },
+    {
+      "destination": "references/docs/distribution.md",
+      "projected_sha256": "5cb47ea32dc3c5ffdd807caa0a8d0429bd964c2598191807e3c934b1e5e656e5",
+      "source": "docs/distribution.md",
+      "source_sha256": "b0125cac0b6ec1d0217e0cbaa6de460dd3d8ca203f5be703be958db5f170ac64"
+    },
+    {
+      "destination": "references/docs/scoring.md",
+      "projected_sha256": "094212e1f7211b8089bc994354743e5a18a17e7e604722edea0eb62960f10551",
+      "source": "docs/scoring.md",
+      "source_sha256": "5a6c9d57d681fa817cd8f89ee7214c0d9938d041081ec5b84cef4a79d92044e2"
+    }
+  ],
+  "generator": "scripts/distribution/skill-docs.py",
+  "generator_sha256": "f14993b1e77d131440eb17a34e63aacd5cbb1e4441c9f5fcb8d0907fcbdce763",
+  "schema_version": "skill-docs-projection.v1",
+  "skill": "ultrafast-atif-helper"
+}

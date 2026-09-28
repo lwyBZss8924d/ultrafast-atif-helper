@@ -1,7 +1,7 @@
 {
-  "name": "fast-jev-compaction",
+  "name": "ultrafast-atif-helper",
   "version": "0.2.0",
-  "description": "Continuous, verbatim context compaction for LLM agents using TypeSafe's Jev model.",
+  "description": "Bounded local trajectory metadata, exact retrieval and source-preserving context views; forked from fast-jev-compaction.",
   "type": "module",
   "license": "MIT",
   "engines": {
@@ -11,12 +11,30 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js"
+    },
+    "./helper": {
+      "types": "./dist/helper/index.d.ts",
+      "import": "./dist/helper/index.js"
     }
   },
   "files": [
-    "dist",
+    "bin",
+    "src",
+    "docs",
+    "skills",
+    ".codex-plugin",
+    "plugin.json",
+    "AGENTS.md",
+    "SPEC.md",
+    "llms.txt",
+    "aicatlog-manifest.json",
     "README.md",
-    "LICENSE"
+    "LICENSE",
+    "SECURITY.md",
+    "dist",
+    "upstream-reference",
+    "scripts",
+    "config"
   ],
   "scripts": {
     "build": "tsc",
@@ -24,12 +42,19 @@
     "test": "vitest run",
     "demo": "tsx examples/demo.ts",
     "typecheck:hooks": "tsc -p tsconfig.hooks.json",
-    "validate:plugin": "claude plugin validate .claude-plugin/plugin.json"
+    "validate:plugin": "python3 scripts/distribution/package.py check"
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
     "tsx": "^4.19.2",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
+  },
+  "bin": {
+    "ultrafast-atif-helper": "./bin/ultrafast-atif-helper.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lwyBZss8924d/ultrafast-atif-helper.git"
   }
 }
