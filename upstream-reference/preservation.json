@@ -1,0 +1,22 @@
+{
+  "schema_version": "upstream-reference.v1",
+  "upstream": "https://github.com/tamaratran/fast-jev-compaction",
+  "status": "inactive_reference_only",
+  "moves": [
+    {
+      "original_path": "hooks/hooks.json",
+      "inactive_path": "upstream-reference/hooks/hooks.json",
+      "sha256": "096590fe886c53759c7a55661d8d4972724248a167851a56b55e5c051995c7d2"
+    },
+    {
+      "original_path": ".claude-plugin/plugin.json",
+      "inactive_path": "upstream-reference/.claude-plugin/plugin.json",
+      "sha256": "a104a866f35027aad2bdb98b02d875b6ddabac837f5d2f08af42488a9aff48e2"
+    },
+    {
+      "original_path": ".claude-plugin/marketplace.json",
+      "inactive_path": "upstream-reference/.claude-plugin/marketplace.json",
+      "sha256": "4a53fed399614e8c43d4c3820510a03fe9863ecdb2aa3aa8534164cf25e9be74"
+    }
+  ]
+}

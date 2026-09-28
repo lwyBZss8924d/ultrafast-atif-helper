@@ -1,0 +1,53 @@
+{
+  "schema_version": "aicatlog.resources.v1",
+  "resources": [
+    {
+      "id": "entry",
+      "kind": "context",
+      "path": "../llms.txt",
+      "when": "Use the selected ultrafast-atif-helper entry contract"
+    },
+    {
+      "id": "contract",
+      "kind": "context",
+      "path": "../AGENTS.md",
+      "when": "Use the selected ultrafast-atif-helper contract contract"
+    },
+    {
+      "id": "specification",
+      "kind": "context",
+      "path": "../SPEC.md",
+      "when": "Use the selected ultrafast-atif-helper specification contract"
+    },
+    {
+      "id": "skill",
+      "kind": "skill",
+      "path": "../skills/ultrafast-atif-helper/SKILL.md",
+      "when": "Use the selected ultrafast-atif-helper skill contract"
+    },
+    {
+      "id": "distribution",
+      "kind": "context",
+      "path": "distribution.md",
+      "when": "Use the selected ultrafast-atif-helper distribution contract"
+    },
+    {
+      "id": "atif-compatibility",
+      "kind": "context",
+      "path": "atif-compatibility.md",
+      "when": "Use the selected ultrafast-atif-helper atif-compatibility contract"
+    },
+    {
+      "id": "configuration",
+      "kind": "context",
+      "path": "configuration.md",
+      "when": "Use the selected ultrafast-atif-helper configuration contract"
+    },
+    {
+      "id": "scoring",
+      "kind": "context",
+      "path": "scoring.md",
+      "when": "Use the selected ultrafast-atif-helper scoring contract"
+    }
+  ]
+}

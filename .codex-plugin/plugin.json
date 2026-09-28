@@ -1,0 +1,22 @@
+{
+  "name": "ultrafast-atif-helper",
+  "version": "0.2.0",
+  "description": "Inspect and filter local agent trajectories while preserving ATIF versions and source evidence.",
+  "author": {
+    "name": "Task Checkpoint contributors"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "repository": "https://github.com/lwyBZss8924d/ultrafast-atif-helper",
+  "interface": {
+    "displayName": "Ultrafast ATIF Helper",
+    "shortDescription": "Inspect and filter local agent trajectories while preserving ATIF versions and source evidence.",
+    "longDescription": "Inspect and filter local agent trajectories while preserving ATIF versions and source evidence. Local CLI installation and any runtime activation are separate explicit operations.",
+    "developerName": "Task Checkpoint contributors",
+    "category": "Developer Tools",
+    "capabilities": [],
+    "defaultPrompt": [
+      "Inspect the local CLI contract and plan a bounded task recall."
+    ]
+  }
+}
