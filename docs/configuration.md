@@ -22,10 +22,18 @@ arguments, Git, model text or a report.
 
 ## Scoring selection
 
-The full template has separate `recorder`, `codex` and `scoring` sections. The helper
+The full template has separate `recorder`, `codex`, `scoring` and optional
+`agent_service` sections. The helper
 consumes only `scoring` for an explicit prepared-scoring operation. It validates the
 other sections so the file remains portable, but never authenticates Codex or starts
 the recorder because those sections exist.
+
+`agent_service` sets finite recorder-native policy ceilings: concurrency 2,
+workers 2, admitted native turns 3 per round, tools 64, deadline 180 seconds,
+rounds 2 and external calls 0. Its data policy defaults to `metadata_only` and
+can select host-admitted `prepared_fragments`. Native turn counts do not claim
+to count hidden provider retries or internal tool-followup model requests.
+This section supplies no credentials and never causes the helper to start Codex.
 
 ```json
 {
@@ -50,6 +58,8 @@ providers are included under `config/`. Custom environment variable names are
 accepted; inline key values, endpoints, fallback providers and unsupported models
 are rejected. The fixed provider profiles own their API routes. `jev-router` is a
 text routing model and is not an allowed Decisions profile.
+Runtime/profile/preload/routing variables such as `HOME`, `BUN_OPTIONS`,
+`NODE_OPTIONS` and `HTTPS_PROXY` cannot be used as credential references.
 
 ```sh
 ultrafast-atif-helper prepare-score --config "$PWD/task-checkpoint.json" \

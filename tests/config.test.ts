@@ -29,5 +29,17 @@ describe("standalone unified config contract",()=>{
     expect(()=>parseConfig({schema_version:CONFIG_VERSION,scoring:{endpoint:"https://example.invalid"}},d)).toThrow("config_unknown_field");
     expect(()=>parseConfig({schema_version:CONFIG_VERSION,scoring:{provider:"typesafe",model:"typesafe/jev-1.13-20260917"}},d)).toThrow("config_unsupported_scoring_model");
     expect(()=>parseConfig({schema_version:CONFIG_VERSION,scoring:{limits:{max_response_bytes:1048577}}},d)).toThrow("config_invalid_limit");
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,scoring:{api_key_env:"BUN_OPTIONS"}},d)).toThrow("config_reserved_api_key_env");
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,scoring:{api_key_env:"HOME"}},d)).toThrow("config_reserved_api_key_env");
+    for(const name of ["PYTHONPATH","PYTHONHOME","PYTHONSTARTUP","PYTHONINSPECT"])
+      expect(()=>parseConfig({schema_version:CONFIG_VERSION,scoring:{api_key_env:name}},d)).toThrow("config_reserved_api_key_env");
+    expect(parseConfig({schema_version:CONFIG_VERSION,scoring:{api_key_env:"MY_JEV_CREDENTIAL"}},d).scoring.api_key_env).toBe("MY_JEV_CREDENTIAL");
+  });
+  it("validates optional native-agent ceilings without activating a native runtime",()=>{
+    const d=temporary(),c=parseConfig({schema_version:CONFIG_VERSION,agent_service:{data_policy:"prepared_fragments",max_rounds:1}},d);
+    expect(c.agent_service).toEqual({concurrency:2,max_workers:2,max_native_turns:3,max_tool_calls:64,deadline_ms:180000,max_rounds:1,data_policy:"prepared_fragments",external_score_max_calls:0});
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{max_workers:32,max_native_turns:3}},d)).toThrow("config_agent_native_turn_budget_too_small");
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{concurrency:3}},d)).toThrow("config_agent_concurrency_exceeds_workers");
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{data_policy:"owner_selected_source"}},d)).toThrow("config_unsupported_agent_data_policy");
   });
 });

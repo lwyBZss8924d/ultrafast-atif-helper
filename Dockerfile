@@ -14,5 +14,5 @@ COPY package.json LICENSE ./
 COPY bin ./bin
 USER node
 WORKDIR /home/node
-ENTRYPOINT ["node", "/opt/ultrafast-atif-helper/bin/ultrafast-atif-helper.mjs"]
+ENTRYPOINT ["/usr/bin/env", "-u", "NODE_OPTIONS", "/usr/local/bin/node", "/opt/ultrafast-atif-helper/bin/ultrafast-atif-helper.mjs"]
 CMD ["--help"]
