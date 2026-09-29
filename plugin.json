@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "ultrafast-atif-helper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Inspect and filter local agent trajectories while preserving ATIF versions and source evidence."
 }

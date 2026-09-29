@@ -37,7 +37,10 @@ describe("standalone unified config contract",()=>{
   });
   it("validates optional native-agent ceilings without activating a native runtime",()=>{
     const d=temporary(),c=parseConfig({schema_version:CONFIG_VERSION,agent_service:{data_policy:"prepared_fragments",max_rounds:1}},d);
-    expect(c.agent_service).toEqual({concurrency:2,max_workers:2,max_native_turns:3,max_tool_calls:64,deadline_ms:180000,max_rounds:1,data_policy:"prepared_fragments",external_score_max_calls:0});
+    expect(c.agent_service).toEqual({execution_mode:"danger-full-access",runtime_update:{mode:"latest-stable",root:null,check_interval_ms:14400000},concurrency:2,max_workers:2,max_native_turns:3,max_tool_calls:64,deadline_ms:180000,max_rounds:1,data_policy:"prepared_fragments",external_score_max_calls:0});
+    expect(parseConfig({schema_version:CONFIG_VERSION,agent_service:{execution_mode:"read-only",runtime_update:{mode:"pinned"}}},d).agent_service.execution_mode).toBe("read-only");
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{execution_mode:"auto"}},d)).toThrow("config_unsupported_execution_mode");
+    expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{runtime_update:{mode:"nightly"}}},d)).toThrow("config_unsupported_runtime_update_mode");
     expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{max_workers:32,max_native_turns:3}},d)).toThrow("config_agent_native_turn_budget_too_small");
     expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{concurrency:3}},d)).toThrow("config_agent_concurrency_exceeds_workers");
     expect(()=>parseConfig({schema_version:CONFIG_VERSION,agent_service:{data_policy:"owner_selected_source"}},d)).toThrow("config_unsupported_agent_data_policy");
