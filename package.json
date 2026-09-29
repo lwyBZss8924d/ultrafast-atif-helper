@@ -1,6 +1,6 @@
 {
   "name": "ultrafast-atif-helper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Bounded local trajectory metadata, exact retrieval and source-preserving context views; forked from fast-jev-compaction.",
   "type": "module",
   "license": "MIT",

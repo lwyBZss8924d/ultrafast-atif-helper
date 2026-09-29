@@ -35,6 +35,17 @@ can select host-admitted `prepared_fragments`. Native turn counts do not claim
 to count hidden provider retries or internal tool-followup model requests.
 This section supplies no credentials and never causes the helper to start Codex.
 
+For the recorder's explicit native service, `agent_service.execution_mode`
+defaults to `danger-full-access`; `read-only` is also supported.
+`agent_service.runtime_update` defaults to `{ "mode": "latest-stable", "root":
+null, "check_interval_ms": 14400000 }`. Its null root selects the recorder state's
+`codex-runtime` directory. The recorder qualifies official stable full packages
+before adopting them between native work cycles. `mode:"pinned"` retains an
+explicit `codex.executable`; a future version needs the optional
+`codex.qualification_receipt` path. The helper validates these portable fields but
+does not read the runtime receipt, download a runtime, invoke auth or change the
+recorder's task state.
+
 ```json
 {
   "schema_version": "task-checkpoint.config.v1",

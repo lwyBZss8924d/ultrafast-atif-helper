@@ -3,21 +3,21 @@
   "files": [
     {
       "destination": "references/config/task-checkpoint.config.schema.json",
-      "projected_sha256": "8743426fcf25c96e41f0a4b6a88c46812cb10c077df3c71128c0f3300c06f506",
+      "projected_sha256": "12428213d6c7e1de0f6fee69bc9af9bcc4dd827eeca70f9201b2448cafe859ff",
       "source": "config/task-checkpoint.config.schema.json",
-      "source_sha256": "8743426fcf25c96e41f0a4b6a88c46812cb10c077df3c71128c0f3300c06f506"
+      "source_sha256": "12428213d6c7e1de0f6fee69bc9af9bcc4dd827eeca70f9201b2448cafe859ff"
     },
     {
       "destination": "references/config/task-checkpoint.example.json",
-      "projected_sha256": "fe38723c81b1ea6e078f617d589bf2d8607db6f7c2c114a289a567ee597bcb08",
+      "projected_sha256": "07ef1525dfae2bb05da6ba0c2030d81b1892676df2010e49351a95d2cc440d8b",
       "source": "config/task-checkpoint.example.json",
-      "source_sha256": "fe38723c81b1ea6e078f617d589bf2d8607db6f7c2c114a289a567ee597bcb08"
+      "source_sha256": "07ef1525dfae2bb05da6ba0c2030d81b1892676df2010e49351a95d2cc440d8b"
     },
     {
       "destination": "references/config/task-checkpoint.typesafe.example.json",
-      "projected_sha256": "64482bc6fa01f0fa2428d1ad50b68d592dc2da2c9d78ea3f88766bbd9770f97a",
+      "projected_sha256": "12fdcc7b4b2e4e53ca67ccb2d6aafc035b26878c763cc7a411da143a84b92796",
       "source": "config/task-checkpoint.typesafe.example.json",
-      "source_sha256": "64482bc6fa01f0fa2428d1ad50b68d592dc2da2c9d78ea3f88766bbd9770f97a"
+      "source_sha256": "12fdcc7b4b2e4e53ca67ccb2d6aafc035b26878c763cc7a411da143a84b92796"
     },
     {
       "destination": "references/docs/atif-compatibility.md",
@@ -27,9 +27,9 @@
     },
     {
       "destination": "references/docs/configuration.md",
-      "projected_sha256": "f5c000ea16035cac974cd1f10332333bfc795a8eab87911e293d41b526fc759c",
+      "projected_sha256": "0be37e21fd8921cf755fed7db445fcab115039975197a23bc5b9a5b57effafda",
       "source": "docs/configuration.md",
-      "source_sha256": "c4760050809d18ae4016199b35dd9b3a8456d5cb704b6d2e09801e81718f1d90"
+      "source_sha256": "8733609ea919c28d611229909e15e0c06cb28971fd336dd7ec5c5e3bae117b4d"
     },
     {
       "destination": "references/docs/distribution.md",

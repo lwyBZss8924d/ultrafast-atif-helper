@@ -1,6 +1,6 @@
 {
   "name": "ultrafast-atif-helper",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Inspect and filter local agent trajectories while preserving ATIF versions and source evidence.",
   "author": {
     "name": "Task Checkpoint contributors"
